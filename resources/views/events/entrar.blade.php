@@ -1,9 +1,9 @@
 @extends('layouts.main')
 
-@section('title', 'Sobre mim')
+@section('title', 'Login')
 
 @section('content')
 
-    <h1>Sobre mim</h1>
+    <h1>Pagina de Login</h1>
 
 @endsection

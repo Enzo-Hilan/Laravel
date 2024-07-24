@@ -1,1 +1,1 @@
-console.log('Linkado com sucesso!')
+console.log("Hello world");

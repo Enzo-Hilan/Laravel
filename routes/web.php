@@ -17,8 +17,23 @@ use App\Http\Controllers\EventController;
 
 Route::get('/', [EventController::class, 'index']);
 
-Route::get('/events/login', [EventController::class, 'login']);
+Route::get('/events/create', [EventController::class, 'create']);
 
-Route::get('/events/sobre', [EventController::class, 'sobre']);
+Route::get('/events/entrar', [EventController::class, 'entrar']);
 
-Route::get('/events/projetos', [EventController::class, 'projetos']);
+Route::get('/events/cadastrar', [EventController::class, 'cadastrar']);
+
+
+Route::get('/contact', function () {
+    return view('contact');
+});
+
+Route::get('/produtos', function () {
+    $busca = request('search');
+
+    return view('products', ['busca' => $busca]);
+});
+
+Route::get('/produtos_teste/{id?}', function ($id = null) {
+    return view('produto', ['id' => $id]);
+});

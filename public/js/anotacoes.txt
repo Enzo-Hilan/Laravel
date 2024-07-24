@@ -1,0 +1,7 @@
+COMANDOS NO TERMINAL
+
+ -- CAMINHO PARA A PASTA DOS CONTROLLERS --
+ app/Http/Controllers
+
+ -- CRIANDO UM CONTROLLER --
+ > php artisan make:controller EventController

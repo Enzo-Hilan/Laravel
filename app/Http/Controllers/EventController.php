@@ -6,23 +6,34 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
-    // Controllers principais
 
     public function index() {
-        return view('welcome');
+        $nome = "Enzo";
+        $idade = 17;
+        $pessoas = ["enzo", "ynara", "soraia"];
+        $cidades = ["SP", "MG", "RJ"];
+
+        return view('welcome', 
+        [
+            "nome" => $nome, 
+            "age" => $idade, 
+            "profissao" => "Programador",
+            "pessoas" => $pessoas,
+            "cidades" => $cidades
+        ]);
     }
 
-    public function login() {
-        $nome = request('nome');
-
-        return view('events.login', ['nome' => $nome]);
+    public function create() {
+        return view('events.create');
     }
 
-    public function sobre() {
-        return view('events.sobre');
+    public function entrar() {
+        return view('events.entrar');
     }
 
-    public function projetos() {
-        return view('events.projetos');
+    public function cadastrar() {
+
+        $name = request('name');
+        return view('events.cadastrar', ['name' => $name]);
     }
 }
